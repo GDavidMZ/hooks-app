@@ -6,9 +6,11 @@ const colors = {
   green: 'bg-green-500 animate-pulse'
 }
 
+type TrafficLightColor = keyof typeof colors; 
+
 export const TrafficLightWithEffect = () => {
 
-  const [light, setlight] = useState('red');
+  const [light, setlight] = useState<TrafficLightColor>('red');
   const [countDown, setcountDown] = useState(5)
 
   // CountDown Effect
